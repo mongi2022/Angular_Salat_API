@@ -1,0 +1,55 @@
+<br>
+<button class="btn btn-outline-primary" (click)="getAllProducts()">All</button>&nbsp;
+
+<!-- <button class="btn btn-outline-primary" (click)="getProductsByToday()">TODAY</button>&nbsp; -->
+
+<br><br><br>
+<div class="alert-danger"></div>
+<div class="container">
+  <table class="table">
+
+    <tbody>
+      <tr *ngFor="let product of products$ ">
+        <h1>Today is : {{today | date: 'yyyy-M-d'}}</h1>
+
+        <h1>{{product.country}}</h1>
+        <h1>{{product.state}}</h1>
+
+        <td>
+
+        </td>
+      </tr>
+
+    </tbody>
+
+  </table>
+</div>
+<div class="container">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">الفجر</th>
+        <th scope="col">الظهر</th>
+        <th scope="col">العصر</th>
+        <th scope="col">المغرب</th>
+        <th scope="col">العشاء</th>
+        <h5>الصلاة</h5>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let item of items$" >
+        <td>{{item.fajr}}</td>
+        <td>{{item.dhuhr}}</td>
+        <td>{{item.asr}}</td>
+        <td>{{item.maghrib}}</td>
+        <td>{{item.isha}}</td>
+        <h5>التوقيت</h5>
+        <td>{{item.date_for}}</td>  
+          </tr>
+
+    </tbody>
+
+  </table>
+</div>
